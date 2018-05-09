@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>官网</title>
+    <link rel="stylesheet" href="css/index.css" type="text/css">
+    <script type="text/javascript" src="js/index.js"></script>
+</head>
+<body>
+<!--重置版+导航栏-->
+<div class="nav">
+<div class="nav_content">
+    <!--重置版-->
+    <a id="reset" href="page1.html" target="_blank">
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEYAAAAmCAIAAAD2uHqJAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyNpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDE0IDc5LjE1MTQ4MSwgMjAxMy8wMy8xMy0xMjowOToxNSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIChNYWNpbnRvc2gpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjE0QTM5REZENDI2NzExRTVCNUJCQUQzNzA4RDdBNzI4IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjE0QTM5REZFNDI2NzExRTVCNUJCQUQzNzA4RDdBNzI4Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6MTRBMzlERkI0MjY3MTFFNUI1QkJBRDM3MDhEN0E3MjgiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6MTRBMzlERkM0MjY3MTFFNUI1QkJBRDM3MDhEN0E3MjgiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz6Xz8qQAAAONklEQVR42txZCVgU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" alt=""/>
+    </a>
+    <!--右侧-->
+    <div class="nav_content_right">
+        <a href="">登录</a>
+        <a href="">注册</a>
+        <a href="">充值</a>
+        <a href="">一站搞定重置版</a>
+        <a class="a555" href="">客服</a>
+        <a class="a555" href="">增值服务</a>
+    </div>
+</div>
+</div>
+<!--内容-->
+<div class="content">
+    <!--子导航栏-->
+<ul>
+<li style="padding-left: 35px;width: 95px"><a href="">首&nbsp;页</a></li>
+<li style="padding-left: 12px;width: 98px;;"><a href="">新闻资讯</a></li>
+<li style="padding-left: 22px;width: 93px;"><a href="">活动中心</a></li>
+<li style="padding-left: 25px;width: 93px;"><a href="">资料攻略</a></li>
+<li style="padding-left: 274px;width: 96px;"><a href="">游戏下载</a></li>
+<li style="padding-left: 22px;width: 96px;"><a href="">游戏特色</a></li>
+<li style="padding-left: 22px;width: 96px;"><a href="">图赏影音</a></li>
+<li style="padding-left: 40px;width: 81px"><a href="">论&nbsp;坛</a></li>
+
+</ul>
+    <!--LOGO-->
+    <a id="logo" href="#">
+        <img src="http://jx3.xoyo.com/zt/2017/06/02/web/logo_2.png" alt=""/>
+    </a>
+    <!--横版第一版-->
+    <div class="frame_1">
+        <!--左布局-->
+        <div class="frame_1_left">
+            <a href=""></a>
+            <div class="frame_1_left_bottom">
+            <div class="frame_1_left_bottom_left">
+                <p>注册送礼</p>
+            </div>
+                <div class="frame_1_left_bottom_right">
+                    <p>账号充值</p>
+                </div>
+            </div>
+        </div>
+        <!--轮播图-->
+        <div class="lunbo">
+            <div style="left: 0" class="lunbo_img">
+                <img style="display: block;opacity: 1" src="http://jx3.xoyo.com/uploadfile/2018/0108/20180108092657293.jpg" alt=""/>
+                <img src="http://jx3.xoyo.com/uploadfile/2018/0105/20180105095347945.jpg" alt=""/>
+                <img src="http://jx3.xoyo.com/uploadfile/2018/0105/20180105062236555.jpg" alt=""/>
+                <img src="http://jx3.xoyo.com/uploadfile/2018/0104/20180104092359337.jpg" alt=""/>
+                <img src="http://jx3.xoyo.com/uploadfile/2018/0103/20180103052824261.jpg" alt=""/>
+                <img src="http://jx3.xoyo.com/uploadfile/2018/0115/20180115113836563.jpg" alt=""/>
+            </div>
+            <ul>
+                <li><i class="now"></i></li>
+                <li><i></i></li>
+                <li><i></i></li>
+                <li><i></i></li>
+                <li><i></i></li>
+                <li><i></i></li>
+            </ul>
+        </div>
+        <!--右布局-->
+        <div class="frame_1_right">
+            <div class="frame_1_right_top">
+                <p>版本内容</p>
+                <span>更多<i></i></span>
+            </div>
+                <img src="https://static.adm.seasungame.com/uploads/files/2017/12/26618e9e5fc5dd02837e673022fc2caa.jpg" alt=""/>
+            <h3>剑网3重制版 12大福利活动</h3>
+            <ul>
+                <li class="li"><i></i><u>重置版新内容</u></li>
+                <li class="li"><i></i><u>免费直升95级</u></li>
+                <li class="li"><i></i><u>转服限时半价</u></li>
+                <li class="li"><i></i><u>12套复刻外装</u></li>
+            </ul>
+        </div>
+    </div>
+    <!--横版第二版-->
+    <div class="frame_1">
+        <!--左布局-->
+        <div class="frame_1_left">
+            <ul>
+                <li class="li"><i></i><u>壮阔大唐次世代升级</u></li>
+                <li class="li"><i></i><u>十三大门派齐聚江湖</u></li>
+                <li class="li"><i></i><u>唯美人设自由捏脸</u></li>
+                <li class="li"><i></i><u>极致双人轻功</u></li>
+                <li class="li"><i></i><u>海量游戏玩法</u></li>
+            </ul>
+            <div class="frame2_1_left_bottom">
+                <span>查看更多></span>
+            </div>
+        </div>
+        <!--选型卡-->
+        <div class="frame2_1_center">
+            <div style="width: 100%" class="frame_1_right_top">
+                <p class="now">最新</p>
+                <p>新闻</p>
+                <p>公告</p>
+                <p>活动</p>
+                <p>媒体</p>
+                <span>更多<i></i></span>
+            </div>
+            <div class="frame2_1_center_xuan">
+                <div class="frame2_1_center_xuan_k">
+            <ul>
+                <li class="li"><i></i><u>[新闻] 兑现千万预约承诺 千万元外星人电脑掉落 </u><span>01-09</span></li>
+                <li class="li"><i></i><u>[新闻] 大漠楼兰走飞沙 龙门绝境基础讲解 </u><span>01-08</span></li>
+                <li class="li"><i></i><u>[公告] 1月8日更新内容 </u><span>01-08</span></li>
+                <li class="li"><i></i><u>[公告] 1月8日例行维护公告（已完成） </u><span>01-07</span></li>
+                <li class="li"><i></i><u>[活动] 重制版充消福利 </u><span>12-29</span></li>
+                <li class="li"><i></i><u>[媒体] 【妖气山】全体型捏脸推荐第一期 </u><span>01-05</span></li>
+            </ul>
+                    <ul>
+                        <li class="li"><i></i><u>[新闻] 兑现千万预约承诺 千万元外星人电脑掉落  </u><span>01-09</span></li>
+                        <li class="li"><i></i><u>[新闻] 大漠楼兰走飞沙 龙门绝境基础讲解 </u><span>01-08</span></li>
+                        <li class="li"><i></i><u>[新闻] 电影级品质 《剑网3》正剧动画高清PV首爆 </u><span>01-05</span></li>
+                        <li class="li"><i></i><u>[新闻] 《剑网3》重制版媒体发号活动汇总 </u><span>01-04</span></li>
+                        <li class="li"><i></i><u>[新闻] 炭寻卓越 携手舒客定制口腔活碳深洁礼盒 </u><span>01-04</span></li>
+                        <li class="li"><i></i><u>[新闻] 西山居ACG全领域布局 《剑网3》番外动画PV首曝 </u><span>01-04</span></li>
+                    </ul>
+                    <ul>
+                        <li class="li"><i></i><u>[公告] 1月8日更新内容 </u><span>01-08</span></li>
+                        <li class="li"><i></i><u>[公告] 1月8日例行维护公告（已完成） </u><span>01-07</span></li>
+                        <li class="li"><i></i><u>[公告] 1月4日更新内容 </u><span>01-04</span></li>
+                        <li class="li"><i></i><u>[公告] 1月4日例行维护公告（已完成） </u><span>01-03</span></li>
+                        <li class="li"><i></i><u>[公告] 1月3日更新内容 </u><span>01-03</span></li>
+                        <li class="li"><i></i><u>[公告] 1月3日临时维护公告（已完成） </u><span>01-03</span></li>
+                    </ul>
+                    <ul>
+                        <li class="li"><i></i><u>[活动] 重制版充消福利 </u><span>12-29</span></li>
+                        <li class="li"><i></i><u>[活动] 免费直升95级 </u><span>12-29</span></li>
+                        <li class="li"><i></i><u>[活动] 全场3倍积分 海量折扣享不停 </u><span>12-29</span></li>
+                        <li class="li"><i></i><u>[活动] 13套外装换季下架 重制版前限时9折 </u><span>12-11</span></li>
+                        <li class="li"><i></i><u>[活动] 2000万回馈到账 充消领提灯背挂 </u><span>12-11</span></li>
+                        <li class="li"><i></i><u>[活动] 狂欢双十二 超低折扣（已结束） </u><span>12-11</span></li>
+                    </ul>
+                    <ul>
+                        <li class="li"><i></i><u>[媒体] 【妖气山】全体型捏脸推荐第一期 </u><span>01-00</span></li>
+                        <li class="li"><i></i><u>[媒体] 17173：《剑网3》重制版独家礼包领取 </u><span>12-29</span></li>
+                        <li class="li"><i></i><u>[媒体] 178:新阵营日常简介 </u><span>12-27</span></li>
+                        <li class="li"><i></i><u>[媒体] 52PK：媒体测评：低端显卡也能流畅体验 </u><span>12-22</span></li>
+                        <li class="li"><i></i><u>[媒体] 52PK:五块钱节目组带你认师门—七秀 </u><span>12-21</span></li>
+                        <li class="li"><i></i><u>[媒体] 17173：“纵江湖·换新颜”活动投票开启 </u><span>12-19</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!--右布局-->
+        <div class="img2">
+        <img style="cursor: pointer;margin-bottom: 10px" src="http://jx3.xoyo.com/assets/website/2015/08/25/images/gg03.jpg" alt=""/>
+        <img style="cursor: pointer" src="http://jx3.xoyo.com/image/%7B2C3D31D3-F52C-413F-B731-75ACD348BFE5%7D.jpg?pc_hash=G8LdX0" alt=""/>
+        </div>
+    </div>
+    <!--模板第三版-->
+    <div style="height: 435px;" class="frame_1">
+        <!--左布局-->
+        <div class="frame3_left">
+            <div class="frame3_left_top">
+            <div class="frame_1_right_top">
+                <p style="width:92px;">推荐服务器</p>
+            </div>
+                <div class="frame3_left_top_gun">
+                    <div class="frame3_left_top_gun_k">
+                    <ul>
+                        <li class="li"><i class="ii"></i><u class="u">[点卡] 双线三区</u><i class="newi">新</i><u style="float: right" class="u">星火燎原</u></li>
+                        <li class="li"><i class="ii"></i><u class="u">[点卡] 双线三区</u><i class="newi">新</i><u style="float: right" class="u">春花秋月</u></li>
+                        <li class="li"><i class="ii"></i><u class="u">[点卡] 双线三区</u><i class="newi">新</i><u style="float: right" class="u">大美江湖</u></li>
+                        <li class="li"><i class="ii"></i><u class="u">[点卡] 双线三区</u><i class="newi">新</i><u style="float: right" class="u">碧海青天</u></li>
+                        <li class="li"><i class="ii"></i><u class="u">[点卡] 双线三区</u><i class="newi">新</i><u style="float: right" class="u">千古风流</u></li>
+                        <li class="li"><i class="ii"></i><u class="u">[点卡] 双线三区</u><i class="newi">新</i><u style="float: right" class="u">锦绣山河</u></li>
+                        </ul>
+                    <ul>
+                        <li class="li"><i class="ii"></i><u class="u">[点卡] 双线三区</u><i class="newi">新</i><u style="float: right" class="u">星火燎原</u></li>
+                        <li class="li"><i class="ii"></i><u class="u">[点卡] 双线三区</u><i class="newi">新</i><u style="float: right" class="u">春花秋月</u></li>
+                        <li class="li"><i class="ii"></i><u class="u">[点卡] 双线三区</u><i class="newi">新</i><u style="float: right" class="u">大美江湖</u></li>
+                        <li class="li"><i class="ii"></i><u class="u">[点卡] 双线三区</u><i class="newi">新</i><u style="float: right" class="u">碧海青天</u></li>
+                        <li class="li"><i class="ii"></i><u class="u">[点卡] 双线三区</u><i class="newi">新</i><u style="float: right" class="u">千古风流</u></li>
+                        <li class="li"><i class="ii"></i><u class="u">[点卡] 双线三区</u><i class="newi">新</i><u style="float: right" class="u">锦绣山河</u></li>
+                        <li class="li"><i class="ii"></i><u class="u">[点卡] 双线三区</u><i class="newi">新</i><u style="float: right" class="u">星火燎原</u></li>
+                        <li class="li"><i class="ii"></i><u class="u">[点卡] 双线三区</u><i class="newi">新</i><u style="float: right" class="u">春花秋月</u></li>
+                        <li class="li"><i class="ii"></i><u class="u">[点卡] 双线三区</u><i class="newi">新</i><u style="float: right" class="u">大美江湖</u></li>
+                    </ul>
+                    </div>
+                </div>
+            </div>
+            <p style="margin: 0 auto" class="p"><span>数据互联服务器查询 ></span></p>
+            <div class="frame3_left_bottom">
+                <ul>
+                    <li><span><i class="i1"></i>新手指南</span></li>
+                    <li><span><i class="i2"></i>剑侠史记</span></li>
+                    <li><span><i class="i3"></i>资料站</span></li>
+                    <li><span><i class="i4"></i>数据库</span></li>
+                    <li><span><i class="i5"></i>官方微信</span></li>
+                    <li><span><i class="i6"></i>官方微博</span></li>
+                </ul>
+            </div>
+        </div>
+    <!--选项卡-->
+    <div class="frame3_center">
+        <div style="width:100%;" class="frame_1_right_top">
+            <p style="margin-left: 15px;" class="now">霸刀</p>
+            <p>长歌</p>
+            <p>苍云</p>
+            <p>丐帮</p>
+            <p>纯阳</p>
+            <p>藏剑</p>
+            <p>少林</p>
+            <p>五毒</p>
+            <p>天策</p>
+            <p>唐门</p>
+            <p>七秀</p>
+            <p>明教</p>
+            <p>万花</p>
+        </div>
+        <div class="frame3_center_content_k">
+            <div class="frame3_center_content_bk">
+            <div style="background: url('https://jx3.xoyo.com/assets/website/2015/08/25/images/mp/bg13.jpg');opacity: 1;" class="frame3_center_content">
+                <h1><img style="margin:15px 0 0 0" src="https://jx3.xoyo.com/assets/website/2015/08/25/images/mp/t13.gif" alt=""/></h1>
+                <h2>北傲决</h2>
+                <p>包含殷雷腿/秀明尘身/松烟竹雾/雪絮金屏四种<br/>套路，腿法迅猛，刀法刚烈，进退由心，偃仰<br/>任意。</p>
+                <img style="margin-top: 40px" src="https://jx3.xoyo.com/assets/website/2015/08/25/images/mp/13.jpg" alt=""/>
+                <p><span>查看更多></span></p>
+            </div>
+                <div style="background: url('https://jx3.xoyo.com/assets/website/2015/08/25/images/mp/bg01.jpg');" class="frame3_center_content">
+                    <h1><img style="margin:15px 0 0 0" src="https://jx3.xoyo.com/assets/website/2015/08/25/images/mp/t01.gif" alt=""/></h1>
+                    <h2>莫问</h2>
+                    <p>内功远程，强大的控制能力和出色的机动性可<br/>以为团队提供强力的辅助。</p>
+                    <h2>相知</h2>
+                    <p>内功远程，可针对不同情况转换琴曲为团队提<br/>供源源不断的辅助效果。</p>
+                    <img style="margin-top: 5px" src="https://jx3.xoyo.com/assets/website/2015/08/25/images/mp/13.jpg" alt=""/>
+                    <p><span>查看更多></span></p>
+                </div>
+                <div style="background: url('https://jx3.xoyo.com/assets/website/2015/08/25/images/mp/bg02.jpg');" class="frame3_center_content">
+                    <h1><img style="margin:15px 0 0 0" src="https://jx3.xoyo.com/assets/website/2015/08/25/images/mp/t02.gif" alt=""/></h1>
+                    <h2>分山劲</h2>
+                    <p>外功近战，擎刀姿态对敌人进行连续追击，盾墙姿<br/>态具有不错防御力, 擎盾姿态具有均衡综合能力。</p>
+                    <h2>铁骨衣</h2>
+                    <p>外功近战，以吸收伤害为主要防御手段，招架<br/>后的反击能力极强。</p>
+                    <img style="margin-top: 5px" src="https://jx3.xoyo.com/assets/website/2015/08/25/images/mp/02.jpg" alt=""/>
+                    <p><span>查看更多></span></p>
+                </div>
+                <div style="background: url('https://jx3.xoyo.com/assets/website/2015/08/25/images/mp/bg03.jpg');" class="frame3_center_content">
+                    <h1><img style="margin:15px 0 0 0" src="https://jx3.xoyo.com/assets/website/2015/08/25/images/mp/t03.gif" alt=""/></h1>
+                    <h2>笑尘决</h2>
+                    <p>外功近战，应接不暇的连招让敌人难以防御，<br/>打击感极强。</p>
+                    <img style="margin-top: 40px" src="https://jx3.xoyo.com/assets/website/2015/08/25/images/mp/03.jpg" alt=""/>
+                    <p><span>查看更多></span></p>
+                </div>
+                <div style="background: url('https://jx3.xoyo.com/assets/website/2015/08/25/images/mp/bg04.jpg');" class="frame3_center_content">
+                    <h1><img style="margin:15px 0 0 0" src="https://jx3.xoyo.com/assets/website/2015/08/25/images/mp/t04.gif" alt=""/></h1>
+                    <h2>太虚剑意</h2>
+                    <p>外功近战，气场与剑术结合，强大的控制和爆<br/>发能力能够一直给与对手压迫。</p>
+                    <h2>紫霞功</h2>
+                    <p>远程内功，爆发力位居各大门派前列，尤为讲<br/>究战机把握和对敌距离。</p>
+                    <img style="margin-top: 5px" src="https://jx3.xoyo.com/assets/website/2015/08/25/images/mp/04.jpg" alt=""/>
+                    <p><span>查看更多></span></p>
+                </div>
+                <div style="background: url('https://jx3.xoyo.com/assets/website/2015/08/25/images/mp/bg05.jpg');" class="frame3_center_content">
+                    <h1><img style="margin:15px 0 0 0" src="https://jx3.xoyo.com/assets/website/2015/08/25/images/mp/t05.gif" alt=""/></h1>
+                    <h2>山居剑意、问水决</h2>
+                    <p>外功近战，能灵活切换双武器应对各种复杂环<br/>境。</p>
+                    <img style="margin-top: 40px" src="https://jx3.xoyo.com/assets/website/2015/08/25/images/mp/05.jpg" alt=""/>
+                    <p><span>查看更多></span></p>
+                </div>
+                <div style="background: url('https://jx3.xoyo.com/assets/website/2015/08/25/images/mp/bg06.jpg');" class="frame3_center_content">
+                    <h1><img style="margin:15px 0 0 0" src="https://jx3.xoyo.com/assets/website/2015/08/25/images/mp/t06.gif" alt=""/></h1>
+                    <h2>易筋经</h2>
+                    <p>近战内功，具有出色的控制能力以及反弹伤害<br/>能力。</p>
+                    <h2>洗髓经</h2>
+                    <p>内功型防御，能反弹首领对自身的伤害。</p>
+                    <img style="margin-top: 5px" src="https://jx3.xoyo.com/assets/website/2015/08/25/images/mp/06.jpg" alt=""/>
+                    <p><span>查看更多></span></p>
+                </div>
+                <div style="background: url('https://jx3.xoyo.com/assets/website/2015/08/25/images/mp/bg07.jpg');" class="frame3_center_content">
+                    <h1><img style="margin:15px 0 0 0" src="https://jx3.xoyo.com/assets/website/2015/08/25/images/mp/t07.gif" alt=""/></h1>
+                    <h2>毒经</h2>
+                    <p>内功远程，可运使十数种不同剧毒效果，配合<br/>操控毒虫进攻。</p>
+                    <h2>补天诀</h2>
+                    <p>内功远程，用蛊术强体补身之心诀，蛊到之<br/>处，气血充盈。</p>
+                    <img style="margin-top: 5px" src="https://jx3.xoyo.com/assets/website/2015/08/25/images/mp/07.jpg" alt=""/>
+                    <p><span>查看更多></span></p>
+                </div>
+                <div style="background: url('https://jx3.xoyo.com/assets/website/2015/08/25/images/mp/bg08.jpg');" class="frame3_center_content">
+                    <h1><img style="margin:15px 0 0 0" src="https://jx3.xoyo.com/assets/website/2015/08/25/images/mp/t08.gif" alt=""/></h1>
+                    <h2>傲血战意</h2>
+                    <p>外功近战，独有的马上战斗，攻防转换之余进<br/>退自如。</p>
+                    <h2>铁牢律</h2>
+                    <p>外功近战，外功防御位列各大门派之首。</p>
+                    <img style="margin-top: 5px" src="https://jx3.xoyo.com/assets/website/2015/08/25/images/mp/08.jpg" alt=""/>
+                    <p><span>查看更多></span></p>
+                </div>
+                <div style="background: url('https://jx3.xoyo.com/assets/website/2015/08/25/images/mp/bg09.jpg');" class="frame3_center_content">
+                    <h1><img style="margin:15px 0 0 0" src="https://jx3.xoyo.com/assets/website/2015/08/25/images/mp/t09.gif" alt=""/></h1>
+                    <h2>惊羽诀</h2>
+                    <p>外功远程，攻击距离远，高额伤害会给与对手<br/>极强的压力。</p>
+                    <h2>天罗诡道</h2>
+                    <p>内外兼修远程攻击，能够释放多种机关，擅长<br/>阵地战。</p>
+                    <img style="margin-top: 5px" src="https://jx3.xoyo.com/assets/website/2015/08/25/images/mp/09.jpg" alt=""/>
+                    <p><span>查看更多></span></p>
+                </div>
+                <div style="background: url('https://jx3.xoyo.com/assets/website/2015/08/25/images/mp/bg10.jpg');" class="frame3_center_content">
+                    <h1><img style="margin:15px 0 0 0" src="https://jx3.xoyo.com/assets/website/2015/08/25/images/mp/t10.gif" alt=""/></h1>
+                    <h2>冰心诀</h2>
+                    <p>内功远程，拥有高闪躲效果及移动速度，常令<br/>对手束手无策。</p>
+                    <h2>云裳心经</h2>
+                    <p>内功远程，以独门内功心经恢复气血，辅助效<br/>果克敌助友。</p>
+                    <img style="margin-top: 5px" src="https://jx3.xoyo.com/assets/website/2015/08/25/images/mp/10.jpg" alt=""/>
+                    <p><span>查看更多></span></p>
+                </div>
+                <div style="background: url('https://jx3.xoyo.com/assets/website/2015/08/25/images/mp/bg11.jpg');" class="frame3_center_content">
+                    <h1><img style="margin:15px 0 0 0" src="https://jx3.xoyo.com/assets/website/2015/08/25/images/mp/t11.gif" alt=""/></h1>
+                    <h2>焚影圣诀</h2>
+                    <p>内功近战， 明教可隐藏自我行踪，并于现身之<br/>后有强大爆发和控制能力。</p>
+                    <h2>明尊琉璃体</h2>
+                    <p>内功近战，以闪躲及消除敌人攻击作为防御手<br/>段，还能给与队友强大的辅助效果。</p>
+                    <img style="margin-top: 5px" src="https://jx3.xoyo.com/assets/website/2015/08/25/images/mp/11.jpg" alt=""/>
+                    <p><span>查看更多></span></p>
+                </div>
+                <div style="background: url('https://jx3.xoyo.com/assets/website/2015/08/25/images/mp/bg12.jpg');" class="frame3_center_content">
+                    <h1><img style="margin:15px 0 0 0" src="https://jx3.xoyo.com/assets/website/2015/08/25/images/mp/t12.gif" alt=""/></h1>
+                    <h2>花间游</h2>
+                    <p>远程内功，具有出色的爆发能力和生存能力。</p>
+                    <h2>离经易道</h2>
+                    <p>内功远程，以针灸恢复气血，具有最强的治疗<br/>驱散能力。</p>
+                    <img style="margin-top: 5px" src="https://jx3.xoyo.com/assets/website/2015/08/25/images/mp/12.jpg" alt=""/>
+                    <p><span>查看更多></span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--右布局-->
+    <div class="frame3_right">
+        <div class="frame3_right_img">
+        <img src="https://static.adm.seasungame.com/uploads/files/2017/07/cc2ff70908d0dc750b7b1e3922815137.jpg" alt=""/>
+        </div>
+        <div style="margin-top: 5px" class="frame3_left_bottom">
+            <ul>
+                <li><span><i class="ii1"></i>视频</span></li>
+                <li><span><i class="ii2"></i>音乐</span></li>
+                <li><span><i class="ii3"></i>cosplay</span></li>
+                <li><span><i class="ii4"></i>美图</span></li>
+                <li><span><i class="ii5"></i>周边</span></li>
+                <li><span><i class="ii6"></i>同人站</span></li>
+            </ul>
+        </div>
+    </div>
+    </div>
+    <!--模板第四版-->
+    <div style="height: 290px;" class="frame_1">
+        <!--左布局-->
+        <div class="frame4_left">
+            <div class="frame_1_right_top">
+                <p>常用专区</p>
+            </div>
+            <img src="https://jx3.xoyo.com/assets/website/2017/04/20/web/img/zq01_1.jpg" alt=""/>
+            <img src="https://jx3.xoyo.com/assets/website/2017/04/20/web/img/zq02.jpg" alt=""/>
+        </div>
+        <!--选项卡-->
+        <div class="frame4_center">
+            <div class="frame_1_right_top">
+                <p>同人站</p>
+            </div>
+            <ul>
+                <li><sub style="background-position: 0 1px"></sub><span>COS</span></li>
+                <li><sub style="background-position: -90px 1px"></sub><span>美图</span></li>
+                <li><sub style="background-position: -187px 1px"></sub><span>视频</span></li>
+                <li><sub style="background-position: -284px 1px"></sub><span>音乐</span></li>
+                <li><sub style="background-position: -483px 1px"></sub><span>周边</span></li>
+            </ul>
+            <div class="frame4_center_img">
+                <div class="frame4_center_img_k">
+                    <div style="opacity: 1" class="frame4_img_k">
+                            <div class="imgstyle"><img src="https://static-zt-game.xoyo.com/jx3-fan-fiction-show/thumb_8c04e887fc7d21c61a85669c428c6204.jpg" alt=""/></div>
+                            <div class="imgstyle"><img src="https://static-zt-game.xoyo.com/jx3-fan-fiction-show/thumb_448ab1f428867340245a2dc862412312.jpg" alt=""/></div>
+                            <div class="imgstyle"><img src="https://static-zt-game.xoyo.com/jx3-fan-fiction-show/thumb_49b4f50ec491b17d3cb8eaa961b5634f.jpg" alt=""/></div>
+                            <div class="imgstyle"><img src="https://static-zt-game.xoyo.com/jx3-fan-fiction-show/thumb_aa5c934ce153967646e0f69a79dcd41f.jpg" alt=""/></div>
+                            <div class="imgstyle"><img src="https://static-zt-game.xoyo.com/jx3-fan-fiction-show/thumb_8be3c4cfd216f6de94857d50739d9d8d.jpg" alt=""/></div>
+                    </div>
+                    <div class="frame4_img_k">
+                        <div class="imgstyle"><img src="https://static-zt-game.xoyo.com/jx3-fan-fiction-show/thumb_dcd473b4bc2a3315209ee2157699c822.jpg" alt=""/></div>
+                        <div class="imgstyle"><img src="https://static-zt-game.xoyo.com/jx3-fan-fiction-show/thumb_af45da7f288ae2b5a9b6e19956e8730c.jpg" alt=""/></div>
+                        <div class="imgstyle"><img src="https://static-zt-game.xoyo.com/jx3-fan-fiction-show/thumb_dd5de6114a32daaeda7f5a68661c80ef.jpg" alt=""/></div>
+                        <div class="imgstyle"><img src="https://static-zt-game.xoyo.com/jx3-fan-fiction-show/thumb_a7cd46c924e21c6cccec72e90c30e77d.jpg" alt=""/></div>
+                        <div class="imgstyle"><img src="https://static-zt-game.xoyo.com/jx3-fan-fiction-show/thumb_37027958e07d6047900c7c869cd4a37b.jpg" alt=""/></div>
+                    </div>
+                    <div class="frame4_img_k">
+                        <div class="imgstyle"><img src="https://static-zt-game.xoyo.com/jx3-fan-fiction-show/thumb_05c59804476fe669261d8995e1f8e3ba.jpg" alt=""/></div>
+                        <div class="imgstyle"><img src="https://static-zt-game.xoyo.com/jx3-fan-fiction-show/thumb_05e1a393a6bfcda2baa96b5e2eb45478.jpg" alt=""/></div>
+                        <div class="imgstyle"><img src="https://static-zt-game.xoyo.com/jx3-fan-fiction-show/thumb_db9443f2754913bee62a19b92eb22eec.jpg" alt=""/></div>
+                        <div class="imgstyle"><img src="https://static-zt-game.xoyo.com/jx3-fan-fiction-show/thumb_814dba01791e426e8629cf17ca7aaebd.jpg" alt=""/></div>
+                        <div class="imgstyle"><img src="https://static-zt-game.xoyo.com/jx3-fan-fiction-show/thumb_82230d7b36fdfe0bf8c455f0eebfcfc8.jpg" alt=""/></div>
+                    </div>
+                    <div class="frame4_img_k">
+                        <div class="imgstyle"><img src="https://static-zt-game.xoyo.com/jx3-fan-fiction-show/thumb_4ba930d42a7ab4754d50a8346534d149.jpg" alt=""/></div>
+                        <div class="imgstyle"><img src="https://static-zt-game.xoyo.com/jx3-fan-fiction-show/thumb_6e2d7de0dd13a8f990980592202232cd.jpg" alt=""/></div>
+                        <div class="imgstyle"><img src="https://static-zt-game.xoyo.com/jx3-fan-fiction-show/thumb_7acfe4e1ca3e1405954e12a482680c5f.jpg" alt=""/></div>
+                        <div class="imgstyle"><img src="https://static-zt-game.xoyo.com/jx3-fan-fiction-show/thumb_e799c0b57bb5ead02cf03f3cb74f2edd.jpg" alt=""/></div>
+                        <div class="imgstyle"><img src="https://static-zt-game.xoyo.com/jx3-fan-fiction-show/thumb_a2b184174d18539b8ad5f002cdfe7ab6.jpg" alt=""/></div>
+                    </div>
+                    <div class="frame4_img_k">
+                        <div class="imgstyle"><img src="https://static-zt-game.xoyo.com/jx3-fan-fiction-show/thumb_6bd520ea2760a2e06f84aaa1bb6b674c.jpg" alt=""/></div>
+                        <div class="imgstyle"><img src="https://static-zt-game.xoyo.com/jx3-fan-fiction-show/thumb_4b62a24458a9b87e4f5cc3baec9331f2.jpg" alt=""/></div>
+                        <div class="imgstyle"><img src="https://static-zt-game.xoyo.com/jx3-fan-fiction-show/thumb_e3718cb40801c4f988d63f39c738cd45.jpg" alt=""/></div>
+                        <div class="imgstyle"><img src="https://static-zt-game.xoyo.com/jx3-fan-fiction-show/thumb_16254567aa0a47c585a066a1e1169c98.jpg" alt=""/></div>
+                        <div class="imgstyle"><img src="https://static-zt-game.xoyo.com/jx3-fan-fiction-show/thumb_b94b2cdc45cec6e63c9065e6d21fbb88.jpg" alt=""/></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!--右布局-->
+        <div class="frame4_right">
+            <div class="frame_1_right_top">
+                <p>直播站</p>
+            </div>
+            <img src="https://jx3.xoyo.com/assets/website/2017/04/20/web/img/zb01.jpg" alt=""/>
+            <img src="https://jx3.xoyo.com/assets/website/2017/04/20/web/img/zb02.jpg" alt=""/>
+        </div>
+    </div>
+    <!--模板第五版-->
+
+    <div style="height: 290px;" class="frame_1">
+        <!--左布局-->
+        <div class="frame5_left">
+            <div class="frame_1_right_top">
+                <p class="now">社区推荐</p>
+                <p>热门新帖</p>
+                <span><i></i>更多</span>
+            </div>
+            <div class="frame5_left_xuan">
+            <div class="frame5_left_xuan_k">
+            <ul style="display: block">
+                <li class="li"><i></i><u>【基三时刻】第八期—全都是演员</u></li>
+                <li class="li"><i></i><u>【三测】重制版三测十人战兽山攻略</u></li>
+                <li class="li"><i></i><u>【三测】10人狼牙堡·燕然峰技能讲解及打法</u></li>
+                <li class="li"><i></i><u>【三测】10人狼牙堡·燕然峰技能讲解及打法</u></li>
+                <li class="li"><i></i><u>【三测】奶花PVP入门攻略</u></li>
+                <li class="li"><i></i><u>【三测】少林基础介绍及JJC的思路</u></li>
+                <li class="li"><i></i><u>【三测】藏剑PVE重制版大型攻略</u></li>
+            </ul>
+            <ul>
+                <li class="li"><i></i><u>【视频】双生花-碧珠泪改编视频</u></li>
+                <li class="li"><i></i><u>【捏脸】英气又美丽的军娘脸</u></li>
+                <li class="li"><i></i><u>【视频】《风骨》-剑网3同人MV</u></li>
+                <li class="li"><i></i><u>【考据】各地图现实地理位置考据</u></li>
+                <li class="li"><i></i><u>【视频】《窃魂影》第一集 为侠之道</u></li>
+                <li class="li"><i></i><u>【COS】霸道入门刀娘</u></li>
+                <li class="li"><i></i><u>【COS】明教COS校服喵姐喵哥超帅</u></li>
+            </ul>
+            </div>
+            </div>
+        </div>
+        <!--中布局-->
+        <div class="frame5_center">
+            <div style="width: 560px;" class="frame_1_right_top">
+                <p>攻略站</p>
+                <span><i></i>更多</span>
+            </div>
+            <div class="frame5_center_center">
+                <img src="https://jx3.xoyo.com/uploadfile/2017/1218/20171218091324672.jpg" alt=""/>
+                <h3><span>【三测】苍云PVP分山新手攻略</span></h3>
+                <p>12-18</p>
+            </div>
+            <ul>
+                <li class="li"><i></i><u>【三测】苍云PVP分山新手攻略</u><em>12/18</em></li>
+                <li class="li"><i></i><u>【三测】10人狼牙堡·燕然峰技能讲解及打法攻略</u><em>12/15</em></li>
+                <li class="li"><i></i><u>【三测】10人狼牙堡·战兽山技能讲解及打法攻略</u><em>12/15</em></li>
+                <li class="li"><i></i><u>【三测】奶花PVP入门攻略</u><em>12/14</em></li>
+            </ul>
+        </div>
+        <!--右布局-->
+        <div class="frame5_right">
+            <div class="frame_1_right_top">
+                <p>赛事中心</p>
+            </div>
+            <div class="frame5_right_img">
+                <img src="https://jx3.xoyo.com/assets/website/2017/04/20/web/img/a258x138.jpg" alt=""/>
+            </div>
+            <div class="frame5_right_text">
+            <h3><p>剑网3八周年COS大赛(感恩八年相伴)</p></h3>
+            <span>3.13-06.30</span>
+            <span>进行中</span>
+            </div>
+        </div>
+    </div>
+    <!--模板第六版-->
+    <div style="height: 230px;margin-bottom: 40px" class="frame_1">
+        <!--左布局-->
+        <div style="height: 215px" class="frame6_left">
+            <div id="ban6p" class="frame_1_right_top">
+                <p class="now">客服专区</p>
+                <p>商务合作</p>
+                <p>广告合作</p>
+            </div>
+            <div class="frame6_left_content_k">
+            <div style="display:block" class="frame6_left_content">
+
+                <p><i></i><span>全民狂欢 《剑网3》龙门绝境大数据公布</span></p>
+                <p>24小时客服热线：</p>
+                <p><b style="font-size: 22px">028-85309911</b></p>
+
+                <div class="frame6_left_btn">
+                    <p><a>在线客服></a></p>
+                    <p><a>关注客服微信></a></p>
+                </div>
+                </div>
+
+                <div class="frame6_left_content">
+
+                    <p>商务QQ：3513366873</span></p>
+                    <p>合作热线：</p>
+                    <p><b style="font-size: 22px">0756-3335688-27831</b></p>
+                    <p>E-mail：jx3-bc@qq.com</p>
+                </div>
+
+
+                <div class="frame6_left_content">
+                    <p><i></i><span>广告资源合作联系方式如下</span></p>
+                    <p><b style="font-size: 22px">QQ：3560875221</b></p>
+                    <p>E-mail：：xsj_3_ad@kingsoft.com</p>
+                </div>
+            </div>
+
+            </div>
+        <!--中布局-->
+        <div style="height: 215px;" class="frame5_center">
+            <div style="width: 560px;" class="frame_1_right_top">
+                <p>攻略站</p>
+                <span><i></i>更多</span>
+            </div>
+            <ul style="margin-top: 10px">
+                <li class="li"><i></i><u>剑网3重制版成女【微为烟夕罗】旌风</u><em>01/10</em></li>
+                <li class="li"><i></i><u>剑网3重制版成女【微为烟夕罗】络丝娘</u><em>01/10</em></li>
+                <li class="li"><i></i><u>剑网3重制版成女 【微为烟夕罗】明如雪</u><em>01/09</em></li>
+                <li class="li"><i></i><u>剑网3重制版成女【微为烟夕罗】轻泽芝</u><em>01/08</em></li>
+                <li class="li"><i></i><u>剑网3重制版成男【微为烟夕罗】望笺</u><em>01/08</em></li>
+            </ul>
+        </div>
+        <!--右布局-->
+        <div style="height: 215px;" class="frame5_right">
+            <div class="frame_1_right_top">
+                <p>合作伙伴</p>
+            </div>
+            <div class="sponsor">
+            <div class="sponsor_k">
+                    <ul>
+                        <li><img src="http://static.seasungame.com/uploads/files/2015/08/732767c90ccc79180707017cf4a0637b.jpg" alt=""/></li>
+                        <li><img src="http://static.seasungame.com/uploads/files/2015/08/ad13b99e7ea98c11c24992b01d929979.jpg" alt=""/></li>
+                        <li><img src="http://static.seasungame.com/uploads/files/2015/08/dea7b940c2362f96ccfe1d0c38a03e58.jpg" alt=""/></li>
+                        <li><img src="http://static.seasungame.com/uploads/files/2015/08/8798346d66d1147dbf6d0538defc0117.jpg" alt=""/></li>
+                        <li><img src="http://static.seasungame.com/uploads/files/2015/08/3c292418917b2de7d80c435849c15d7a.jpg" alt=""/></li>
+                        <li><img src="http://static.seasungame.com/uploads/files/2015/08/a09580580e0acb7a223544bd19e3f74d.jpg" alt=""/></li>
+                        <li><img src="http://static.seasungame.com/uploads/files/2015/08/49d6a15d34e8bd995aeca434e6d23648.jpg" alt=""/></li>
+                        <li><img src="http://static.seasungame.com/uploads/files/2015/08/4deaf9208df58e0a9ac0443e035f0523.jpg" alt=""/></li>
+                        <li><img src="http://static.seasungame.com/uploads/files/2015/08/73774095108986678bfe1c939a81b6cb.jpg" alt=""/></li>
+                        <li><img src="http://static.seasungame.com/uploads/files/2016/05/4ca6481f9bbc0dc59a777ee8b132242e.jpg" alt="" width="75px" height="26px"/></li>
+                        <li><img src="http://static.seasungame.com/uploads/files/2016/05/e6bd598a0ef2e7a95d1b4a4ebb34fa82.jpg" alt=""/></li>
+                        <li><img src="http://static.seasungame.com/uploads/files/2016/05/5144f52265e89a5d47fb7b1bddbfcdf2.png" alt=""width="75px" height="26px"/></li>
+                    </ul>
+                <ul>
+                <li><img src="http://static.seasungame.com/uploads/files/2015/08/732767c90ccc79180707017cf4a0637b.jpg" alt=""/></li>
+                <li><img src="http://static.seasungame.com/uploads/files/2015/08/ad13b99e7ea98c11c24992b01d929979.jpg" alt=""/></li>
+                <li><img src="http://static.seasungame.com/uploads/files/2015/08/dea7b940c2362f96ccfe1d0c38a03e58.jpg" alt=""/></li>
+                <li><img src="http://static.seasungame.com/uploads/files/2015/08/8798346d66d1147dbf6d0538defc0117.jpg" alt=""/></li>
+                <li><img src="http://static.seasungame.com/uploads/files/2015/08/3c292418917b2de7d80c435849c15d7a.jpg" alt=""/></li>
+                <li><img src="http://static.seasungame.com/uploads/files/2015/08/a09580580e0acb7a223544bd19e3f74d.jpg" alt=""/></li>
+                <li><img src="http://static.seasungame.com/uploads/files/2015/08/49d6a15d34e8bd995aeca434e6d23648.jpg" alt=""/></li>
+                <li><img src="http://static.seasungame.com/uploads/files/2015/08/4deaf9208df58e0a9ac0443e035f0523.jpg" alt=""/></li>
+                <li><img src="http://static.seasungame.com/uploads/files/2015/08/73774095108986678bfe1c939a81b6cb.jpg" alt=""/></li>
+                <li><img src="http://static.seasungame.com/uploads/files/2016/05/4ca6481f9bbc0dc59a777ee8b132242e.jpg" alt="" width="75px" height="26px"/></li>
+                <li><img src="http://static.seasungame.com/uploads/files/2016/05/e6bd598a0ef2e7a95d1b4a4ebb34fa82.jpg" alt=""/></li>
+                <li><img src="http://static.seasungame.com/uploads/files/2016/05/5144f52265e89a5d47fb7b1bddbfcdf2.png" alt=""width="75px" height="26px"/></li>
+            </ul>
+
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <!--分割图-->
+    <img src="https://jx3.xoyo.com/assets/website/2015/08/25/images/footer.jpg" alt="" width="100%" height="123px"/>
+    <!--底部-->
+    <div class="bottom">
+        <p style="margin-bottom: 10px"><span>关于我们</span>|<span>服务协议</span>|<span>客服中心</span>|<span>联系我们</span>|<span>诚聘英才</span></p>
+        <p>Copyright © 1999-2018<span style="margin-right: 0">Kingsoft Corporation</span>.All rights reserved.成都西山居世游科技有限公司 版权所有</p>
+        <p><span>增值电信业务经营许可证 川B2-20130104</span>蜀ICP备14009198号-2 文网游备字（2011）C-PRG041号<span>川公网安备 51019002000850号</span></p>
+        <p><span>网络文化经营许可证 川网文[2015]1923-059号</span><span>互联网出版许可证 新出网证<川></川>字027号</span></p>
+        <p><span>信息系统安全等级保护备案证书编号：510113990146</span><span>《网络游戏管理暂行办法》第九条内容</span><span>《中华人民共和国网络安全法》</span><span style="color: #ffa200">违法和不良信息举报中心</span></p>
+        <p style="height: 48px;;margin-top: 10px">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFsAAAAiCAMAAAAHxVWiAAABwlBMVEUAAAD+AAD/////////////////////////////////Bgf////////////////+AAD////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////9BQT////////////////////////////////////+AQH/AAD////////4hYT////+EA7/AAD+FRX8S0r////7bm35qKT+GRj8fHv9UFD+trb9ISD/5+j////5mJX////////+AAD9AAD/AAD+Kir9Tk7+YF/9JSX//Pz+6en9wcD+l5b+kJD+dHT+NDX9Ly/9Fhb+BgX++Pj+4uL/t7f9paX9SUn+PT3+OTn9DAz93Nz+1NT9xMT+cXD9Q0P+ISH9ISH98/P+7e3+2dn+ysr+sbH9q6r+nZz9k5P+hob9hIP9gYD9fX39e3r9bGz+Vlb9zs7+rq7+QUGaIxq5AAAAY3RSTlMA8gXpmBWe+U3RBeBDv1fn1yrl20ARCYA3IgPji3xuMPLNycbBuXRHRDonDgv+spyIXR4H9byikC0a++yseGlgWlA8/fDa1LaVg1RKM/no3aeRY+/t5+awqHUE8u7h39zZgmH01tkPAAAEjUlEQVRIx52W91cTQRDHvwYSjeQ0pPeYhBQCpNCRIk1Awd57WTYBpINS7b33/9fZS84jcBKen192b+7u8+bN7cw74Nylfbtw4WoTBI62iNci47UKavwooT8SiQzr8Be7adSOc7nc+C7kclchqGHbqQSRTacN50EcEiE5DV8qlXIh4/MHMEDqXTklshljO9EDSNEaBXGANhVy3hbaxR0xKVCLU+NluHgQQIucqT8W8zuJjEFJvJJWQ6k7Ity6NnoY+0pEfKf78HXALVwJqATouqFO0x2iXS9sffdNW9z8+dzKr/mlHW7Ku4uePxJ0uWpNBWx9DRQ5oek20u4Q4AFU9+Z7Jni1ttOdZMRRtpUGEbHv4sYW9+IjVuRlqfv0QXRkmBb+PbqfP/ibUYmbyzVJaLqT2IubTzCFmSlFOpCfmJ999/YOgPpGd3V1dTKZFIX3VRdp2pN7TTE/+M5lcX7y49PpQsiKLYxQ4BhUyrs3FPXTKfJuTsw+YQqPZi9fpzerBN6KimYKDVYVGduD+6VS66+cqrP6mik8XF3jnL4lzjMtbOXdA9PFFBf55rfH6qtP5pd48XxnNd39Zd18hsm85/zLK/XFpz+42jv2jrr6ervLZIrSnRGTKUiX9Y3/6kvVPVdwzfP1R6r57QSZVTeCtoTJBaCN7om55zIlEklous2q+2ahshP8s2p+PEnmEneUFQ6IodDqPkb4tN3HVfcRWTbFP6jqL8vb5wkaRXy44HYCQ7Q0O7TdXtplVffMZm5JbZ78jnlC9DDCjVaRN4kIE4ruShAJ4YaSRfyve5UqsDxbML+Wy8GXl/IL67/X88u86EbfGcbOIEaPnPQcYQ3GIBR3GkS86HaH5OmruD8WWnHh2dynyY0BvvFsduXJdPHIT68uktvtdPqPtdDoi0gUk8w0Art6MpmMXnYPmgkvoyCt8rRMo+j+TGoiN845X/z+7iHbxuWD6GPaCLcG++0ocIPUhby/zjxgGlR5ENdWU6HPaoSPuICtc3Dq20/2D44Dtv0aeNsA+Cq2YQn7OrDVnX/D/o0V0Ok1gEC3AwAl7ufTK3PzkxPrC/mpFy9eTOUXN9Z+PPv0YeXNQznv/0KtybgGnI8vLUzO3fKgyQGgWqfzOMTG0QR4RhMg6kaTIOyjQQD1yfb2Rn27W9/e7lHcZaAZ60wBUo2jxVU96KZdD056oy3mIHqtNVYDEKuKhrqAcEiSug9JZos07CjnVvtyZBhXBu3w9rtFhazZejFaohGwXtj3N7qYDfbmSlhqAXh03UNU9L27T6RbRc8Za22poTaEamMRCA2kUNYBXZhSR3+nI9wTDNYBPTVQ2Ms/W5ZVhGT3gbN61thqM6Rhv9LqB0aMlgyMMVF5a0eLUZLiQEB1L+d2V+cuAH4rpCHhjhvhrIqOBYxAb6A5aAPczb1tZwGYKG+6RIn7Xrl/5GtAWkITjWuLra8KCDNXE3PqEOhsZ91AZ6CDxrWbbncmIOg2Q6HMv/1tUqO7FYg3d7SO2VKA/swB9JulGuNJOi5S2OBB9m40XAm01EJwrAtF/gD3MLauGMUocgAAAABJRU5ErkJggg==" alt=""/>
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAAAkCAMAAABIZG8KAAAAq1BMVEUAAAD////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////Nr6iZAAAAOHRSTlMA+gUN8+EJ7oJANRjaOk0U1q2cZFT35btKIRC1p4dzbmouJMnBsZKNYVHp0c7EoBx8XFhEl3gfKdlwDNMAAAOkSURBVEjHtZXnkuIwEITHEWcyBkzOOSwH2+//ZOeRZO+y9lUdd8X3hyosaWZ6WiN6A93myHFGkU7v42MPSe1Mb+OEjAW9j6V5PIKZ0zupBrUBFleD3si09ouo98cMzn6K54aP/3LGw6BybG+8tNoag5TOfF8Lkk2PXqLZ5JOi3pTKiGITpQzsl1peJyJ9CMTdXiHEHJJg/zNWq6hb/89SJpY8T2jRaTw3Ktpuu+Gszye4zXFr21xLD3YuVEA/trmvpbQhC7jMK5wglWDYlBOCuVEJYRs4URlraH7e4z6VMEyDT1Q097IDc2yGJWtTzdErcy5w/TJSeKUiW5F61dusFhV8YR6dn4ZsAHCoSIwKKVoWgCExxb1oo8j6p1HLx5INNPIgSNkKVbxr9E2NOjIsE98D5m1OakvHI5rxkpLpC3SfEk6u13XMqowoZWYT+crGB6fpVTmIefUTMHnZSzAnQ9eADhWoo505x8MTE/E5mDqApXH2lLJRj4Gr4pJgD1nrjDQljB15s+mmZUi3aEiUb7rBs9yGsou5mtIKvHlGVAE6/KEHyYNSxuitwFA3XS6s2peyVtY8RhwhSzWcDJRv9k5ru661D5FS0LwpUdH7XNJJpKuC5B003Zt4iO6z9JA6CXoq5YjIMNPQgVDjSeSqEnCNdsMnqY4bh644lrlB0hSJckuWn+m2DmCFXteWwprBfkCf9Q6XJKbEasS/Tol1T+IypdSrAD5IMICkJavUBtHX3/Mmj7BfdVf4016IXIxP19NtVnVcdj94SJ3F67/Lh84DiiqxoRJZ+VbYcCyNdM7dnfuD5rAaQm3d9ynDi5XtfUhWJDnk6up8cJieuV3JLmzomQkrTQJfzpxwuNhp2iG/Oa5SUE9yxzIxJINUFaQEcebMY5eecdlMJBmnstijGhShav84v6rdNk5stOupNVIxKmMSQXI6J7cwvjXpx3xw7MROC/m833i/+CYIztoi/aNeQUbtbogaR3sxZ6zYuelUIBFeUQRy42ojJsREyWlZ3Fom1LBbmmydwU7IElHOeOKeqzqVEYrxpOhrWVv730y2Yd+K3WcIDhM/XeEc4g/6OyzgThkzZCHZ1dNvxvjI/V+pt+hF1nxDcvzsInqyg4H4ds8COsA+MuglvDtNUHlywjC4KJdJYvHos0mZ7mlEr9LY3XH0qYzqZRF0LGs3kY/YzqB/JNTyd7MUXSdbldynf0O/aTAjei8GUHvQm7GToU5/xW8qd8VYbd+kOwAAAABJRU5ErkJggg==" alt=""/>
+            <img src="data:image/png;base64,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" alt=""/>
+            <img src="data:image/png;base64,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" alt=""/>
+        </p>
+        <p>婉拒18岁以下未成年用户进入游戏 健康游戏忠告：抵制不良游戏 拒绝盗版游戏 注意自我保护 谨防受骗上当 适度游戏益脑 沉迷游戏伤身 合理安排时间 享受健康生活</p>
+        <u style="display:none">返回顶部</u>
+    </div>
+<!--固定二维码-->
+<div class="fiexdimg">
+    <img src="https://jx3.xoyo.com/zt/2017/03/23/wxcode/wx.png" alt=""/>
+</div>
+</div>
+</body>
+</html>
